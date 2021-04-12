@@ -1,11 +1,11 @@
 import { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import styles from './ContactForm.module.css';
 import { connect } from 'react-redux';
 import contactsOperations from '../../redux/contacts/contacts-operations';
 import { getAllContacts } from '../../redux/contacts/contacts-selectors';
 import { ToastContainer, toast } from 'react-toastify';
 import PropTypes from 'prop-types';
+import styles from './ContactForm.module.css';
 
 class ContactForm extends Component {
   state = {
@@ -44,7 +44,11 @@ class ContactForm extends Component {
     const { name, number } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit} className={styles.form}>
+      <form
+        onSubmit={this.handleSubmit}
+        className={styles.form}
+        autoComplete="off"
+      >
         <label htmlFor={this.nameInputId} className={styles.formLabel}>
           Name
           <input

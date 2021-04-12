@@ -1,0 +1,11 @@
+.homePage {
+  padding: 15px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: unset;
+  background-position-x: center;
+}
+
+.homeTitle {
+  color: lightblue;
+}
